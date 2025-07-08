@@ -1,17 +1,10 @@
 
 public class Reverse {
-    static void reverseHere(int[] a) {
-        // init i (begin) and j (end)
+    static void reverse(int[] a) {
         int i = 0, j = a.length - 1;
-        // while i is less then j
         while (i < j) {
-            // store temp a current index
             int tmp = a[i];
-            // a current index(begining) = a(last in array
-            // then add 1 to i 
             a[i++] = a[j];
-            // use temp to make a starting value = a ending value in array
-            // then subtract one from j
             a[j--] = tmp;
         }
     }
@@ -22,7 +15,7 @@ public class Reverse {
         // print out of array with toString
         System.out.println("Original array: " + java.util.Arrays.toString(numbers));
         // sent to method
-        reverseHere(numbers);
+        reverse(numbers);
         // print out result
         System.out.println("Reversed array: " + java.util.Arrays.toString(numbers));
     }
